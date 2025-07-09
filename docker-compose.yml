@@ -9,6 +9,8 @@ services:
       - db
     environment:
       - DATABASE_URL=postgresql://fastapi:fastapi@db:5432/shortener_db
+    env_file:
+      - .env
     volumes:
       - .:/app
     restart: always
